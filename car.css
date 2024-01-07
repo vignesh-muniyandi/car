@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+body{
+   width: 100%;
+   min-height: 100vh;
+   background-color: black;
+   color: white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    animation: header 1s ease-in-out;
+    
+}
+@keyframes header{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+nav li{
+    display: inline-block;
+    margin:10px 20px;
+    font-weight: bold;
+}
+.main{
+    width:100%;
+    display: flex;
+}
+.content{
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 5%;
+  overflow: hidden;
+  animation: content 2s ease-in-out;
+}
+@keyframes content{
+    0%{
+        transform: translateX(-100%);
+    }
+}
+.content h1{
+    font-size: 80px;
+    margin-bottom: 1%;
+    letter-spacing:8px ;
+}
+.content h2{
+    font-size: 25px;
+    margin-bottom: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+span{
+    color: yellow;
+}
+.content p{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.content button{
+  padding: 15px 30px;
+  background: transparent;
+  color: white; 
+  font-size: 17px;
+  border-radius: 10px;
+  transition: .5s ease;
+}
+.content button:hover{
+    background: rgb(43, 43, 193);
+    color: white;
+    box-shadow: 0 0 1rem blue;
+}
+.image{
+    width: 50%;
+    size: 30%;
+    margin-top: 5%;
+    animation: image 5s ease-in-out;
+    z-index: -1;
+}
+@keyframes image{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-220%);
+    }
+}
+img{
+    width: 40rem;
+}
+@media screen and (max-width:1200px){
+    .content{
+        width: 100%;
+
+    }
+    .image{
+width: 100%;
+position: absolute;
+bottom: -5%;
+display: flex;
+justify-content:center;
+    }
+    img{
+        width:20rem
+    }
+}
+@media screen and (max-width:576px){
+    .content{
+        width: 100%;
+ text-align: center;
+    }
+    .content h1,h2{
+        margin-bottom: 5%;
+    }
+    .image{
+width: 100%;
+position: absolute;
+bottom: -5%;
+display: flex;
+justify-content:center;
+    }
+    img{
+        width:20rem
+    }
+}
